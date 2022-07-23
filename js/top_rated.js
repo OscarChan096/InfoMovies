@@ -391,3 +391,8 @@ const _results = {
 const data_top_rated = _results;
 const data = data_top_rated.results;
 data.forEach(el => console.log(el.id));
+
+let node = document.querySelectorAll('.pelicula a img');
+node.forEach((el,index) => el.src = `https://image.tmdb.org/t/p/w500/${data[index].poster_path}`);
+//node.forEach(el => el.href = "www.google.com");
+//console.log('hola');
