@@ -23,8 +23,6 @@ async function awaitResponse() {
     console.log('Tu respuesta hola: ', response)
 }
 
-getCharacter('bruce willis')
-
 awaitResponse();
 
 
