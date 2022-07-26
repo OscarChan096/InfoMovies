@@ -1,11 +1,55 @@
-const _results = {
+/*const _results = {
     "results": [
-        {
+        { // -----------------------------------------------
             "adult": false,
             "backdrop_path": "/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
             "genre_ids": [
                 18,
                 80
+            ],
+            "cast": [
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 504,
+                    "known_for_department": "Acting",
+                    "name": "Tim Robbins",
+                    "original_name": "Tim Robbins",
+                    "popularity": 17.396,
+                    "profile_path": "/hsCu1JUzQQ4pl7uFxAVFLOs9yHh.jpg",
+                    "cast_id": 3,
+                    "character": "Andy Dufresne",
+                    "credit_id": "52fe4231c3a36847f800b131",
+                    "order": 0
+                },
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 192,
+                    "known_for_department": "Acting",
+                    "name": "Morgan Freeman",
+                    "original_name": "Morgan Freeman",
+                    "popularity": 75.542,
+                    "profile_path": "/905k0RFzH0Kd6gx8oSxRdnr6FL.jpg",
+                    "cast_id": 4,
+                    "character": "Ellis Boyd 'Red' Redding",
+                    "credit_id": "52fe4231c3a36847f800b135",
+                    "order": 1
+                },
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 4029,
+                    "known_for_department": "Acting",
+                    "name": "Bob Gunton",
+                    "original_name": "Bob Gunton",
+                    "popularity": 19.722,
+                    "profile_path": "/rr2KDCKK4t0f5YhZibCpLCAsJxc.jpg",
+                    "cast_id": 5,
+                    "character": "Warden Norton",
+                    "credit_id": "52fe4231c3a36847f800b139",
+                    "order": 2
+                }
             ],
             "id": 278,
             "original_language": "en",
@@ -19,13 +63,57 @@ const _results = {
             "vote_average": 8.7,
             "vote_count": 21833
         },
-        {
+        { // ---------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/90ez6ArvpO8bvpyIngBuwXOqJm5.jpg",
             "genre_ids": [
                 35,
                 18,
                 10749
+            ],
+            "cast": [
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 35742,
+                    "known_for_department": "Acting",
+                    "name": "Shah Rukh Khan",
+                    "original_name": "Shah Rukh Khan",
+                    "popularity": 12.239,
+                    "profile_path": "/nLITkps4X81wy2opHgTJ0cs310I.jpg",
+                    "cast_id": 1,
+                    "character": "Raj Malhotra",
+                    "credit_id": "52fe47d69251416c750a71a1",
+                    "order": 0
+                },
+                {
+                    "adult": false,
+                    "gender": 1,
+                    "id": 55061,
+                    "known_for_department": "Acting",
+                    "name": "Kajol",
+                    "original_name": "Kajol",
+                    "popularity": 8.781,
+                    "profile_path": "/cwum24EsxNwpcEsboKkudiGySLY.jpg",
+                    "cast_id": 2,
+                    "character": "Simran Singh",
+                    "credit_id": "52fe47d69251416c750a71a5",
+                    "order": 1
+                },
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 691,
+                    "known_for_department": "Acting",
+                    "name": "Amrish Puri",
+                    "original_name": "Amrish Puri",
+                    "popularity": 10.952,
+                    "profile_path": "/uhMGFS7tuG71LDv2wk9LfZZ4EG6.jpg",
+                    "cast_id": 3,
+                    "character": "Chaudhry Baldev Singh",
+                    "credit_id": "52fe47d69251416c750a71a9",
+                    "order": 2
+                }
             ],
             "id": 19404,
             "original_language": "hi",
@@ -39,12 +127,56 @@ const _results = {
             "vote_average": 8.7,
             "vote_count": 3724
         },
-        {
+        { // -------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg",
             "genre_ids": [
                 18,
                 80
+            ],
+            "cast": [
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 3084,
+                    "known_for_department": "Acting",
+                    "name": "Marlon Brando",
+                    "original_name": "Marlon Brando",
+                    "popularity": 18.495,
+                    "profile_path": "/fuTEPMsBtV1zE98ujPONbKiYDc2.jpg",
+                    "cast_id": 5,
+                    "character": "Don Vito Corleone",
+                    "credit_id": "52fe422bc3a36847f8009357",
+                    "order": 0
+                },
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 1158,
+                    "known_for_department": "Acting",
+                    "name": "Al Pacino",
+                    "original_name": "Al Pacino",
+                    "popularity": 50.996,
+                    "profile_path": "/fMDFeVf0pjopTJbyRSLFwNDm8Wr.jpg",
+                    "cast_id": 6,
+                    "character": "Don Michael Corleone",
+                    "credit_id": "52fe422bc3a36847f800935b",
+                    "order": 1
+                },
+                {
+                    "adult": false,
+                    "gender": 2,
+                    "id": 3085,
+                    "known_for_department": "Acting",
+                    "name": "James Caan",
+                    "original_name": "James Caan",
+                    "popularity": 41.384,
+                    "profile_path": "/bGyOCCOIgcIyKjOGLoXoyp0XWHf.jpg",
+                    "cast_id": 7,
+                    "character": "Santino 'Sonny' Corleone",
+                    "credit_id": "52fe422bc3a36847f800935f",
+                    "order": 2
+                }
             ],
             "id": 238,
             "original_language": "en",
@@ -58,7 +190,7 @@ const _results = {
             "vote_average": 8.7,
             "vote_count": 16258
         },
-        {
+        { // ---------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
             "genre_ids": [
@@ -78,7 +210,7 @@ const _results = {
             "vote_average": 8.6,
             "vote_count": 12944
         },
-        {
+        { // ------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg",
             "genre_ids": [
@@ -97,7 +229,7 @@ const _results = {
             "vote_average": 8.6,
             "vote_count": 9797
         },
-        {
+        { // -----------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg",
             "genre_ids": [
@@ -116,7 +248,7 @@ const _results = {
             "vote_average": 8.6,
             "vote_count": 255
         },
-        {
+        { // -------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/3RMLbSEXOn1CzLoNT7xFeLfdxhq.jpg",
             "genre_ids": [
@@ -135,7 +267,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 237
         },
-        {
+        { // -------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/hZth9NCeXvvO7Xi98d8q34e1Ier.jpg",
             "genre_ids": [
@@ -155,7 +287,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 13075
         },
-        {
+        { // -----------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg",
             "genre_ids": [
@@ -175,7 +307,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 8888
         },
-        {
+        { // ----------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/tj6iPnz18hGfr0LKqWmG6Cp3niO.jpg",
             "genre_ids": [
@@ -193,7 +325,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 6529
         },
-        {
+        { // -------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/w2uGvCpMtvRqZg6waC1hvLyZoJa.jpg",
             "genre_ids": [
@@ -211,7 +343,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 2262
         },
-        {
+        { // ----------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/v5CEt88iDsuoMaW1Q5Msu9UZdEt.jpg",
             "genre_ids": [
@@ -230,7 +362,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 337
         },
-        {
+        { // -------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/TU9NIjwzjoKPwQHoHshkFcQUCG.jpg",
             "genre_ids": [
@@ -250,7 +382,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 14015
         },
-        {
+        { // -------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg",
             "genre_ids": [
@@ -268,7 +400,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 1420
         },
-        {
+        { // ------------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
             "genre_ids": [
@@ -288,7 +420,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 14152
         },
-        {
+        { // -------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/cfT29Im5VDvjE0RpyKOSdCKZal7.jpg",
             "genre_ids": [
@@ -309,7 +441,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 27904
         },
-        {
+        { // ---------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
             "genre_ids": [
@@ -327,7 +459,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 6738
         },
-        {
+        { // -------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/fQq1FWp1rC89xDrRMuyFJdFUdMd.jpg",
             "genre_ids": [
@@ -346,7 +478,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 977
         },
-        {
+        { // --------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
             "genre_ids": [
@@ -365,7 +497,7 @@ const _results = {
             "vote_average": 8.5,
             "vote_count": 23467
         },
-        {
+        { // -----------------------------------------------------------------------------------
             "adult": false,
             "backdrop_path": "/lXhgCODAbBXL5buk9yEmTpOoOgR.jpg",
             "genre_ids": [
@@ -386,13 +518,46 @@ const _results = {
             "vote_count": 19823
         }
     ]
+}*/
+
+// -----------------------------------
+
+const BASE_URL = "https://api.themoviedb.org/3";
+const API_KEY = "5f633841a9fdd684a028b2f38006f591";
+axios.get(
+    `${BASE_URL}/movie/550?api_key=${API_KEY}`
+).then((response) => {
+    console.log('Peliculas')
+    console.log(response)
+}).catch((error) => {
+    console.log(error)
+});
+
+async function getCharacter(characterID) {
+    let personaje = await axios.get(
+        `${BASE_URL}/person/${characterID}?api_key=${API_KEY}`
+    );
+    return personaje.data
 }
 
-const data_top_rated = _results;
-const data = data_top_rated.results;
-data.forEach(el => console.log(el.id));
+async function awaitResponse() {
+    let response = await getCharacter(45);
+    console.log('Tu respuesta hola: ', response)
+}
 
-let node = document.querySelectorAll('.pelicula a img');
-node.forEach((el,index) => el.src = `https://image.tmdb.org/t/p/w500/${data[index].poster_path}`);
+getCharacter('bruce willis')
+
+awaitResponse();
+
+// -------------------------------------------------------
+
+//const data_top_rated = _results;
+//const data = data_top_rated.results;
+//data.forEach(el => console.log(el.poster_path));
+
+//let node = document.querySelectorAll('.pelicula a img');
+//for (let i=0; i < node.length &&  i < data.length; i++){
+    //node[i].src = `https://image.tmdb.org/t/p/w500${data[i].poster_path}`;
+//}
+//node.forEach((el,index) => el.src = `https://image.tmdb.org/t/p/w500${data[index].poster_path}`);
 //node.forEach(el => el.href = "www.google.com");
-//console.log('hola');

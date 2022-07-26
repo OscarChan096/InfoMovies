@@ -1,0 +1,16 @@
+body{
+    background-color: #11181e;
+}
+
+.bg-nav{
+    background-color: #1c2230;
+}
+
+.color-text-nav{
+    color: white;
+}
+
+.img-size{
+    height: 2em;
+    width: 8em;
+}
