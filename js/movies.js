@@ -86,10 +86,20 @@ fetch(requests.fetchActionMovies)
 function pressSearch(event) {
     if (event.key == 'Enter') {
         let title = document.getElementById('search').value;
-        if (movies.includes(title))
-            alert('Si existe la pelicula en el catalogo');
-        else
-            alert('No existe la pelicula en el catalogo');
+        const alert = document.getElementById('alert');
+        const textAlert = document.getElementById('text_alert');
+        if (movies.includes(title)) {
+            alert.style.backgroundColor = '#009900';
+            textAlert.innerText = 'EXITO: la pelicula se encuentra en el catalogo';
+        } else {
+            alert.style.backgroundColor = '#8E1900';
+            textAlert.innerText = 'ERROR: no se encontro la pelicula en el catalogo';
+        }
+    
+        setTimeout(function () {
+            alert.style.backgroundColor = '#11181e';
+            textAlert.innerText = '';
+        }, 2300);
     }
 }
 
@@ -105,7 +115,7 @@ function buscar() {
         textAlert.innerText = 'ERROR: no se encontro la pelicula en el catalogo';
     }
 
-    setTimeout(function(){
+    setTimeout(function () {
         alert.style.backgroundColor = '#11181e';
         textAlert.innerText = '';
     }, 2300);
