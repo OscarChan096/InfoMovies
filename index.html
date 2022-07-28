@@ -12,6 +12,7 @@
     <!--- custom css --->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/alert.css">
 </head>
 
 <body>
@@ -41,28 +42,27 @@
                             <a class="nav-link" href="#">Infantil</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    </form>
+                    <div class="d-flex">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Pelicula" aria-label="Search" onkeydown="pressSearch(event)">
+                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="buscar()">Buscar</button>
+                </div>
                 </div>
             </div>
         </nav>
+        <div id="alert" class="alert">
+            <label id="text_alert" class="text_alert"></label>
+        </div>
     </header>
 
     <!--MAIN-->
     <main>
 
         <!------- Peliculas mejor puntuadas ------->
-        <div id="headrow">
-            <div class="row">
-                <h2 class="row__title"></h2>
-                <div class="row__posters"></div>
-            </div>
-        </div>
+        <div id="headrow"></div>
 
     </main>
 
-    <script src="js/top_rated.js"></script>
+    <script src="js/movies.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
