@@ -51,6 +51,11 @@ fetch(requests.fetchTrending)
                 row_posters.appendChild(poster);
                 let mov = movie.title != null ? movie.title:movie.name;
                 movies.push(mov);
+                const button = document.createElement("div");
+                button.classList.add('row-col', 'mb-1');
+                button.innerHTML = `<button type="button" class="row__button btn btn-light" onclick="getInfo(${movie.id})" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </button>`;
+                row_posters.appendChild(button)
             }
         });
     });
@@ -144,7 +149,15 @@ fetch(requests.fetchHorrorMovies)
     });
 });
 
+function getInfo(movieID){
+    fetch(`${base_url}/movie/${movieID}?${api}`)
+    .then((res) => res.json())
+    .then((data) => {
+    console.log(data);
+    });  
     
+
+}
 
 function pressSearch(event) {
     if (event.key == 'Enter') {

@@ -43,9 +43,10 @@
                         </li>
                     </ul>
                     <div class="d-flex">
-                    <input id="search" class="form-control me-2" type="search" placeholder="Pelicula" aria-label="Search" onkeydown="pressSearch(event)">
-                    <button class="btn btn-outline-success my-2 my-sm-0" onclick="buscar()">Buscar</button>
-                </div>
+                        <input id="search" class="form-control me-2" type="search" placeholder="Pelicula"
+                            aria-label="Search" onkeydown="pressSearch(event)">
+                        <button class="btn btn-outline-success my-2 my-sm-0" onclick="buscar()">Buscar</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -59,6 +60,58 @@
 
         <!------- Peliculas mejor puntuadas ------->
         <div id="headrow"></div>
+
+        <!-- Modal -->
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">The Gray Man</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <img id="img-movie" src="./img/FV3e3kOXgAIa4iT.jpg" class="img-card img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Resume</h6>
+                                        <p id="resume">Lorem ipsum dolor sit amet,
+                                            consectetur adipisicing elit.
+                                            Qui odit iste sunt amet magnam numquam ut exercitationem,
+                                            voluptatum error quam illum excepturi in nesciunt explicabo,
+                                            placeat optio. Repudiandae, saepe similique.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h6>Cast</h6>
+                                        <p id="cast">
+                                            Ryan Gosling
+                                            Chris Evans
+                                            Ana de Armas
+                                            Jessica Henwick
+                                            Regé-Jean Page
+                                            Dhanush
+                                            Wagner Moura
+                                            Julia Butters
+                                            Alfre Woodard
+                                            Billy Bob Thornton
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </main>
 

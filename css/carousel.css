@@ -45,3 +45,15 @@
 	transform: scale(1.09);
 	opacity: 1;
 }
+
+.modal-content{
+	background-color: #11181e;
+	color: white;
+}
+
+.btn-close{
+	background-color: white !important;
+}
+.bi{
+	color:white
+}
