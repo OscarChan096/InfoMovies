@@ -49,7 +49,8 @@ fetch(requests.fetchTrending)
                 poster.id = s2;
                 poster.src = img_url + movie.poster_path;
                 row_posters.appendChild(poster);
-                movies.push(movie.title);
+                let mov = movie.title != null ? movie.title:movie.name;
+                movies.push(mov);
             }
         });
     });
@@ -78,10 +79,72 @@ fetch(requests.fetchActionMovies)
                 poster.id = s2;
                 poster.src = img_url + movie.backdrop_path;
                 row_posters.appendChild(poster);
-                movies.push(movies.title);
+                let mov = movie.title != null ? movie.title:movie.name;
+                movies.push(mov);
             }
         });
     });
+
+    // comedy
+fetch(requests.fetchComedyMovies)
+.then((res) => res.json())
+.then((data) => {
+    const headrow = document.getElementById("headrow");
+    const row = document.createElement("div");
+    row.className = "row";
+    headrow.appendChild(row);
+    const title = document.createElement("h2");
+    title.className = "row__title";
+    title.innerText = "Comedy Movies";
+    row.appendChild(title);
+    const row_posters = document.createElement("div");
+    row_posters.className = "row__posters";
+    row.appendChild(row_posters);
+    data.results.forEach((movie, index) => {
+        //console.log(movie);
+        if (index < 15) {
+            const poster = document.createElement("img");
+            poster.className = "row__poster";
+            var s2 = movie.id;
+            poster.id = s2;
+            poster.src = img_url + movie.backdrop_path;
+            row_posters.appendChild(poster);
+            let mov = movie.title != null ? movie.title:movie.name;
+            movies.push(mov);
+        }
+    });
+});
+// Horror
+fetch(requests.fetchHorrorMovies)
+.then((res) => res.json())
+.then((data) => {
+    const headrow = document.getElementById("headrow");
+    const row = document.createElement("div");
+    row.className = "row";
+    headrow.appendChild(row);
+    const title = document.createElement("h2");
+    title.className = "row__title";
+    title.innerText = "Horror Movies";
+    row.appendChild(title);
+    const row_posters = document.createElement("div");
+    row_posters.className = "row__posters";
+    row.appendChild(row_posters);
+    data.results.forEach((movie, index) => {
+        //console.log(movie);
+        if (index < 15) {
+            const poster = document.createElement("img");
+            poster.className = "row__poster";
+            var s2 = movie.id;
+            poster.id = s2;
+            poster.src = img_url + movie.backdrop_path;
+            row_posters.appendChild(poster);
+            let mov = movie.title != null ? movie.title:movie.name;
+            movies.push(mov);
+        }
+    });
+});
+
+    
 
 function pressSearch(event) {
     if (event.key == 'Enter') {
