@@ -62,56 +62,80 @@
         <div id="headrow"></div>
 
         <!-- Modal -->
-        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+
                 <div class="modal-content">
+
                     <div class="modal-header">
-                        <h2 class="modal-title" id="exampleModalLabel">The Gray Man</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-4">
-                                <img id="img-movie" src="./img/FV3e3kOXgAIa4iT.jpg" class="img-card img-fluid" alt="">
-                            </div>
-                            <div class="col-8">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>Resume</h6>
-                                        <p id="resume">Lorem ipsum dolor sit amet,
-                                            consectetur adipisicing elit.
-                                            Qui odit iste sunt amet magnam numquam ut exercitationem,
-                                            voluptatum error quam illum excepturi in nesciunt explicabo,
-                                            placeat optio. Repudiandae, saepe similique.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <h6>Cast</h6>
-                                        <p id="cast">
-                                            Ryan Gosling
-                                            Chris Evans
-                                            Ana de Armas
-                                            Jessica Henwick
-                                            Regé-Jean Page
-                                            Dhanush
-                                            Wagner Moura
-                                            Julia Butters
-                                            Alfre Woodard
-                                            Billy Bob Thornton
-                                        </p>
-                                    </div>
-                                </div>
 
+                    <div class="d-block d-lg-flex flex-row p-3 pt-0">
+
+                        <!-- Movie image -->
+                        <div class="modal-img p-3 d-flex flex-column justify-content-between align-items-center">
+
+                            <img src="" alt="" id="movie_poster_modal" class="rounded-2">
+
+                            <div class="average d-flex justify-content-center align-items-center flex-column m-3"
+                                id="average">
+                                <h5 class="m-0" id="movie_average"></h5>
                             </div>
+
+                            <div class="gap-2 d-flex flex-column">
+                                <button type="button" class="btn btn-dark">
+                                    <a href="https://www.netflix.com/mx/" target="_blank" class="text-white">Watch
+                                        movie</a>
+                                </button>
+
+                                <button type="button" class="btn btn-danger">
+                                    <a href="" id="youtube" target="_blank" class="text-white">Watch trailer</a>
+                                </button>
+                            </div>
+
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        <!-- Movie details -->
+                        <div class="modal-body">
+                            <h3 class="modal-title" id="movie_name"></h3>
+                            <h5 class="modal-original-name fw-normal" id="movie_original_name"></h5>
+
+                            <label for="movie_date" class="mt-2 fw-semibold">Release date</label>
+                            <h5 class="modal-date fw-normal" id="movie_date"></h5>
+
+                            <label for="movie_sinopsis" class="mt-2 fw-semibold">Overview</label>
+                            <h5 class="modal-sinopsis fw-normal" id="movie_sinopsis"></h5>
+
+                            <label for="movie_cast" class="mt-2 fw-semibold">Cast</label>
+                            <!--<div id="movie_cast" class="movie_cast"></div>-->
+
+                            <!-------------------------------------->
+                            <div id="movie_cast">
+                                <div class="peliculas-recomendadas contenedor">
+                                                    
+                                    <div class="contenedor-principal">
+                                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+                        
+                                        <div class="contenedor-carousel">
+                                            <div id="carousel" class="carousel">
+                                                
+                                            </div>
+                                        </div>
+                        
+                                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-------------------------------------->
+
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
     </main>
 

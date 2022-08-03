@@ -1,3 +1,7 @@
+a{
+	text-decoration: none;
+}
+
 .row {
 	color: white;
 	margin-left: 20px;
@@ -46,14 +50,170 @@
 	opacity: 1;
 }
 
-.modal-content{
+.modal-content {
 	background-color: #11181e;
 	color: white;
 }
 
-.btn-close{
+.btn-close {
 	background-color: white !important;
 }
-.bi{
-	color:white
+
+.bi {
+	color: white
+}
+
+.text-green {
+	color: #198754;
+}
+
+.text-orange {
+	color: #ffc107;
+}
+
+.text-red {
+	color: #dc3545;
+}
+
+.border-green {
+	border: #198754 3px solid;
+}
+
+.border-orange {
+	border: #ffc107 3px solid;
+}
+
+.border-red {
+	border: #dc3545 3px solid;
+}
+
+
+/* MODAL */
+
+.modal-content,
+.modal-header {
+	background-color: #181818;
+	border-bottom: #0c0c0c;
+}
+
+.average {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.modal-content h5 {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.modal-content img {
+	width: 150px;
+}
+
+#movie_cast {
+	width: 550px;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles,
+.contenedor-titulo-controles {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+
+.contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0, 0, 0, 0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover {
+	background: rgba(0, 0, 0, .9);
+}
+
+.contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.pelicula{
+	margin: 0 5px;
+}
+
+.contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.contenedor-carousel .carousel .pelicula{
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.contenedor-carousel .carousel .pelicula:hover, .text{
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.contenedor-carousel .carousel .pelicula img, .text{
+	width: 100%;
+	vertical-align: top;
+}
+
+.text{
+	margin-left: 23px;
+	color: white;
+	font-size: .8em;
 }
