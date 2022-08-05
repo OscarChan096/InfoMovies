@@ -153,6 +153,14 @@ fetch(requests.fetchHorrorMovies)
 
 // Funcion para obtener los datos de cada pelicula y mostrarlos en el elemento Modal
 function getInfo(movieID) {
+
+    const carousel = document.getElementById("carousel");
+    const peliculas = document.querySelector('.pelicula');
+    const fila = document.querySelector('.contenedor-carousel');
+    const flechaIzquierda = document.getElementById('flecha-izquierda');
+    const flechaDerecha = document.getElementById('flecha-derecha');
+    console.log(fila.DOCUMENT_NODE);
+
     fetch(`${base_url}/movie/${movieID}?${api}`)
         .then((res) => res.json())
         .then((data) => {
@@ -174,7 +182,7 @@ function getInfo(movieID) {
                         arr_cast.push(castName)
                     }
                     // Asignamos como valor el array limitado a diez elementos, en una nueva variable para poder asignarla dentro del DOM
-                    let arr_cast_global = arr_cast.join(", ")
+                    //let arr_cast_global = arr_cast.join(", ")
                     //console.log(arr_cast_global)
 
                     // ASIGNAR VARIABLES CON DATOS
@@ -256,24 +264,21 @@ function getInfo(movieID) {
 
 
         });
+
+    // botones del carrusel -------------------------------------------
+
+    // ? ----- ----- Event Listener para la flecha derecha. ----- -----
+    flechaDerecha.addEventListener('click', () => {
+        fila.scrollLeft += fila.offsetWidth;
+    });
+
+    // ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+    flechaIzquierda.addEventListener('click', () => {
+        fila.scrollLeft -= fila.offsetWidth;
+    });
+    // ----------------------------------------------------------------
+
 }
-
-const fila = document.querySelector('.contenedor-carousel');
-const flechaIzquierda = document.getElementById('flecha-izquierda');
-const flechaDerecha = document.getElementById('flecha-derecha');
-const peliculas = document.querySelectorAll('.pelicula');
-console.log(peliculas);
-
-// ? ----- ----- Event Listener para la flecha derecha. ----- -----
-flechaDerecha.addEventListener('click', () => {
-    fila.scrollLeft += fila.offsetWidth;
-});
-
-// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
-flechaIzquierda.addEventListener('click', () => {
-    fila.scrollLeft -= fila.offsetWidth;
-});
-
 
 
 function pressSearch(event) {
