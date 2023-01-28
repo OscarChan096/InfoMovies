@@ -2,140 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoMovie</title>
-    <!--- bootstrap CSS --->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!--- custom css --->
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/alert.css">
-    <link rel="shortcut icon" href="assets/favicon.ico" />
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InfoMovie</title>
+  <!--- bootstrap CSS --->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="shortcut icon" href="assets/favicon.ico" />
 </head>
 
 <body>
-
-    <!--HEADER-->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="assets/logo.png" class="img-size"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="series.html">Series</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Movies</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <input id="search" class="form-control me-2" type="search" placeholder="Pelicula"
-                            aria-label="Search" onkeydown="pressSearch(event)">
-                        <button class="btn btn-outline-success my-2 my-sm-0" onclick="buscar()">Buscar</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div id="alert" class="alert">
-            <label id="text_alert" class="text_alert"></label>
-        </div>
-    </header>
-
-    <!--MAIN-->
-    <main>
-
-        <!------- Peliculas ------->
-        <div id="headrow"></div>
-
-        <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <div class="d-block d-lg-flex flex-row p-3 pt-0">
-
-                    <!-- Movie image -->
-                    <div class="modal-img p-3 d-flex flex-column justify-content-between align-items-center">
-
-                        <img src="" alt="" id="movie_poster_modal" class="rounded-2">
-
-                        <div class="average d-flex justify-content-center align-items-center flex-column m-3"
-                            id="average">
-                            <h5 class="m-0" id="movie_average"></h5>
-                        </div>
-
-                        <div class="gap-2 d-flex flex-column">
-                            <button type="button" class="btn btn-dark">
-                                <a href="https://www.netflix.com/mx/" target="_blank" class="text-white">Watch movie</a>
-                            </button>
-
-                            <button type="button" class="btn btn-danger">
-                                <a href="" id="youtube" target="_blank" class="text-white">Watch trailer</a>
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <!-- Movie details -->
-                    <div class="modal-body">
-                        <h3 class="modal-title" id="movie_name"></h3>
-                        <h5 class="modal-original-name fw-normal" id="movie_original_name"></h5>
-
-                        <label for="movie_date" class="mt-2 fw-semibold">Release date</label>
-                        <h5 class="modal-date fw-normal" id="movie_date"></h5>
-
-                        <label for="movie_sinopsis" class="mt-2 fw-semibold">Overview</label>
-                        <h5 class="modal-sinopsis fw-normal" id="movie_sinopsis"></h5>
-
-                        <label for="movie_cast" class="mt-2 fw-semibold">Cast</label>
-
-                        <!-------------------------------------->
-                        <div id="movie_cast">
-                            <div class="peliculas-recomendadas contenedor">
-                                                
-                                <div class="contenedor-principal">
-                                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-                    
-                                    <div class="contenedor-carousel">
-                                        <div id="carousel" class="carousel">
-                                            
-                                        </div>
-                                    </div>
-                    
-                                    <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-------------------------------------->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </main>
-
-    <script src="js/movies.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
